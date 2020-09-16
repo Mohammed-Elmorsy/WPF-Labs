@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp3.Bruches"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="Bruches" Height="300" Width="300">
+    <Grid>
+        <!--
+        - solid
+        - linear brushes 
+        - radial brushes
+        - images bruch
+        - visual brush
+        
+        -->
+        <!--<Grid.Background>
+            <ImageBrush ImageSource="c:/1.jpg" Viewport="0,0,0.1,0.1" TileMode="FlipXY"/>
+        </Grid.Background>-->
+        <!-- Visual Brush-->
+        <Button Content="Welcome" 
+                Width="100"
+                Height="30"
+                Background="Red" Name="btn" Margin="92,35,100,204"/>
+        <Rectangle Width="100"
+                   Height="30">
+            <Rectangle.Fill>
+                <VisualBrush Visual="{Binding ElementName=btn}"/>
+            </Rectangle.Fill>
+        </Rectangle>
+    </Grid>
+</Window>

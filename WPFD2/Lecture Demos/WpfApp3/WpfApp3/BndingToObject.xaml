@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApp3.BndingToObject"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="BndingToObject" Height="300" Width="300">
+    <Window.Resources>
+        <local:Employee x:Key="myemp" ID="200" FirstName="Ahmed" LastName="Ali"/>
+    </Window.Resources>
+    <Grid>
+        <StackPanel DataContext="{StaticResource myemp}" Orientation="Horizontal" VerticalAlignment="Center">
+            <TextBlock Text="{Binding ID}" FontSize="40" Margin="2"/>
+            <TextBlock Text="{Binding FirstName}" FontSize="40" Margin="2"/>
+            <TextBlock Text="{Binding LastName}" FontSize="40" Margin="2"/>
+        </StackPanel> 
+    </Grid>
+</Window>

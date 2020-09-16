@@ -1,0 +1,54 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <!--<LinearGradientBrush x:Key="btnbg">
+            <LinearGradientBrush.GradientStops>
+                <GradientStop Offset="0.0" Color="red"/>
+                <GradientStop Offset="0.5" Color="Yellow"/>
+                <GradientStop Offset="1.0" Color="Cyan"/>
+            </LinearGradientBrush.GradientStops>
+        </LinearGradientBrush>
+        <FontWeight x:Key="btnfw">Bold</FontWeight>
+        <FontFamily x:Key="btnff">Verdana</FontFamily>-->
+
+    </Window.Resources>
+    <StackPanel>
+        <!--<Button Style="{StaticResource btnstyle}">Welcome</Button>
+        <Button Style="{StaticResource btnstyle}">Welcome</Button>
+        <Button Style="{StaticResource btnstyle}">Welcome</Button>
+        <Button Style="{StaticResource btnstyle}">Welcome</Button>-->
+        <Button>Mansoura</Button>
+        <Button>Mansoura</Button>
+        <Button>Mansoura</Button>
+        <Button>Mansoura</Button>
+        <!--<Button Width="100"
+                Height="30"
+                FontWeight="{StaticResource btnfw}"
+                FontFamily="{StaticResource btnff}"
+                Margin="5"    
+                Background="{StaticResource btnbg}"
+                >
+            
+            Welcome</Button>
+        <Button Width="100"
+                Height="30"
+                FontWeight="{StaticResource btnfw}"
+                FontFamily="{StaticResource btnff}"
+                Margin="5"
+                Background="{StaticResource btnbg}"
+                >Welcome</Button>
+        <Button Width="100"
+                Height="30"
+                FontWeight="{StaticResource btnfw}"
+                FontFamily="{StaticResource btnff}"
+                Margin="5"
+                Background="{StaticResource btnbg}"
+                >Welcome</Button>-->
+    </StackPanel>
+</Window>

@@ -1,0 +1,81 @@
+﻿<Window x:Class="buttonAnimation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:buttonAnimation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Style.Setters>
+                <Setter Property="Width" Value="70"/>
+                <Setter Property="Height" Value="40"/>
+            </Style.Setters>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0">One
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation From="70" To="150" 
+                                            Storyboard.TargetProperty="Width"
+                                            Storyboard.TargetName="btn_two"
+                                            Duration="00:00:2"
+                                            RepeatBehavior="3x"
+                                            AutoReverse="True"
+                                            />
+                            <DoubleAnimation From="40" To="100" 
+                                            Storyboard.TargetProperty="Height"
+                                            Storyboard.TargetName="btn_two"
+                                            Duration="00:00:2"
+                                            RepeatBehavior="Forever"
+                                            AutoReverse="True"
+                                            />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+
+        <Button Grid.Row="1" Grid.Column="1" Name="btn_two">Two</Button>
+        <Rectangle Name="rectangle" Grid.Row="2" Grid.Column="0" Fill="Green" Width="150" Height="100">
+            <Rectangle.Triggers>
+                <EventTrigger RoutedEvent="Grid.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation From="Red" To="Yellow"
+                                            Duration="00:00:2"
+                                            RepeatBehavior="Forever"
+                                            AutoReverse="True"
+                                            Storyboard.TargetName="rectangle"
+                                            Storyboard.TargetProperty="Fill.Color"
+                                          />
+                            <DoubleAnimation Storyboard.TargetName="rectangle"
+                                             Storyboard.TargetProperty="RenderTransform.(RotateTransform.Angle)"
+                                             From="0" To="360"
+                                             Duration="00:00:1"
+                                             AutoReverse="True"
+                                             RepeatBehavior="Forever"
+                                             />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Rectangle.Triggers>
+            <Rectangle.RenderTransform>
+                <RotateTransform CenterX="75" CenterY="50"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+    </Grid>
+</Window>

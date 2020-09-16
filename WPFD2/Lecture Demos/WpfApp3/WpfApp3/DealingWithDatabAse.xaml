@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApp3.DealingWithDatabAse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="DealingWithDatabAse" Height="300" Width="382.331">
+    <Grid Loaded="fun">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ListBox SelectionChanged="getcurrentemployee" Grid.Row="0" Width="150" Height="100" Background="LightPink" Name="mylist"/>
+        <StackPanel Name="mystack" Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Width="100" Height="30" Margin="5" FontSize="20" Text="{Binding ID}"></TextBlock>
+            <TextBlock Width="100" Height="30" Margin="5" FontSize="20" Text="{Binding FirstName}"></TextBlock>
+            <TextBlock Width="100" Height="30" Margin="5" FontSize="20" Text="{Binding LastName}"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

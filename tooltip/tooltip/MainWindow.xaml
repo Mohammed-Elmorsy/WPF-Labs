@@ -1,0 +1,20 @@
+﻿<Window x:Class="tooltip.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tooltip"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="500">
+    <Grid>
+        <Button Content="I have a fancy tooltip">
+            <Button.ToolTip>
+                <StackPanel>
+                    <TextBlock FontWeight="Bold" Margin="5">there is an image under me</TextBlock>
+                    <Image Source="E:/DotNET/WPF/Lab/tooltip/8.jpg"></Image>
+                    <TextBlock FontWeight="Bold" Margin="5">there is an image above me</TextBlock>
+                </StackPanel>
+            </Button.ToolTip>
+        </Button>
+    </Grid>
+</Window>
